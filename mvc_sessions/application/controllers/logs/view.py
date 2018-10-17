@@ -1,4 +1,4 @@
-from . import config
+import app.application.controllers.logs.config as config
 import app
 
 

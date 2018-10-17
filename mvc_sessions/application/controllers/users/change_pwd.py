@@ -1,7 +1,7 @@
 """
     Class for change the password
 """
-from . import config
+import app.application.controllers.users.config as config
 import hashlib
 import app
 

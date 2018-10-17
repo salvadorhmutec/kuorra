@@ -1,7 +1,7 @@
 """
     Class for update users
 """
-from . import config
+import app.application.controllers.users.config as config
 import hashlib
 import app
 

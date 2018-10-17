@@ -1,4 +1,4 @@
-import config
+import app.application.controllers.main.config as config
 import app
 
 
