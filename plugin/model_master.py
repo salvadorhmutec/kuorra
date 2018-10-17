@@ -1,5 +1,5 @@
 import web
-import app.application.models.config as config
+import application.models.config as config
 
 db = config.db
 

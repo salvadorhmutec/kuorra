@@ -1,4 +1,4 @@
-import config
+import application.controllers.table_name.config as config 
 import hashlib
 import app
 

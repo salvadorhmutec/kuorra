@@ -1,5 +1,5 @@
 import web
-import config
+import application.api_table_name.config as config 
 import json
 
 
