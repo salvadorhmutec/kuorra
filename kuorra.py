@@ -134,7 +134,7 @@ def all_models(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
-    db_port = args[6]
+    db_port = int(args[6])
 
     model = model_generator()
 
@@ -157,7 +157,7 @@ def one_model(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
-    db_port = args[7]
+    db_port = int(args[7])
 
 
     model = model_generator()
@@ -179,7 +179,7 @@ def all_apis(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
-    db_port = args[6]
+    db_port = int(args[6])
 
     api = api_generator()
 
@@ -202,7 +202,7 @@ def one_api(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
-    db_port = args[7]
+    db_port = int(args[7])
 
     api = api_generator()
 
@@ -223,7 +223,7 @@ def all_views(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
-    db_port = args[6]
+    db_port = int(args[6])
 
     view = view_generator()
 
@@ -246,7 +246,7 @@ def one_view(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
-    db_port = args[7]
+    db_port = int(args[7])
 
     view = view_generator()
 
@@ -267,7 +267,7 @@ def all_controllers(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
-    db_port = args[6]
+    db_port = int(args[6])
 
     controller = controller_generator()
 
@@ -290,7 +290,7 @@ def one_controller(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
-    db_port = args[7]
+    db_port = int(args[7])
 
     controller = controller_generator()
 
