@@ -101,14 +101,14 @@ def help():
     print 'kuorra -nl project_name -> NEW WEB.PY LOGIN PROJECT'
     print 'kuorra -d -> DEPLOY PROJECT'
     print 'kuorra -i -> INFORMATION'
-    print 'kuorra -am db host user pw -> CREATE ALL TABLES MODELS'
-    print 'kuorra -m db table host user pw -> CREATE ONE TABLE MODEL'
-    print 'kuorra -aa db host user pw -> CREATE ALL TABLES API'
-    print 'kuorra -a db table host user pw -> CREATE ONE TABLE API'
-    print 'kuorra -av db host user pw -> CREATE ALL TABLES VIEWS'
-    print 'kuorra -v db table host user pw -> CREATE ONE TABLE VIEW'
-    print 'kuorra -ac db host user pw -> CREATE ALL TABLES CONROLLERS'
-    print 'kuorra -c db table host user pw -> CREATE ONE TABLE CONTROLLER'
+    print 'kuorra -am db host user pw port -> CREATE ALL TABLES MODELS'
+    print 'kuorra -m db table host user pw port -> CREATE ONE TABLE MODEL'
+    print 'kuorra -aa db host user pw port -> CREATE ALL TABLES API'
+    print 'kuorra -a db table host user pw port -> CREATE ONE TABLE API'
+    print 'kuorra -av db host user pw port -> CREATE ALL TABLES VIEWS'
+    print 'kuorra -v db table host user pw port -> CREATE ONE TABLE VIEW'
+    print 'kuorra -ac db host user pw port -> CREATE ALL TABLES CONROLLERS'
+    print 'kuorra -c db table host user pw port -> CREATE ONE TABLE CONTROLLER'
     print ''
 
 
@@ -134,6 +134,7 @@ def all_models(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     model = model_generator()
 
@@ -141,6 +142,7 @@ def all_models(args):
     model.db_name = db_name
     model.db_user = db_user
     model.db_pw = db_pw
+    model.db_port = db_port
 
     model.table_name = name
 
@@ -155,6 +157,8 @@ def one_model(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
+
 
     model = model_generator()
 
@@ -162,6 +166,7 @@ def one_model(args):
     model.db_name = db_name
     model.db_user = db_user
     model.db_pw = db_pw
+    model.db_port = db_port
     model.table_name = db_table
 
     model.conectar()
@@ -174,6 +179,7 @@ def all_apis(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     api = api_generator()
 
@@ -181,6 +187,7 @@ def all_apis(args):
     api.db_name = db_name
     api.db_user = db_user
     api.db_pw = db_pw
+    api.db_port = db_port
 
     api.table_name = name
 
@@ -195,6 +202,7 @@ def one_api(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     api = api_generator()
 
@@ -202,6 +210,7 @@ def one_api(args):
     api.db_name = db_name
     api.db_user = db_user
     api.db_pw = db_pw
+    api.db_port = db_port
     api.table_name = db_table
 
     api.conectar()
@@ -214,6 +223,7 @@ def all_views(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     view = view_generator()
 
@@ -221,6 +231,7 @@ def all_views(args):
     view.db_name = db_name
     view.db_user = db_user
     view.db_pw = db_pw
+    view.db_port = db_port
 
     view.table_name = name
 
@@ -235,6 +246,7 @@ def one_view(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     view = view_generator()
 
@@ -242,6 +254,7 @@ def one_view(args):
     view.db_name = db_name
     view.db_user = db_user
     view.db_pw = db_pw
+    view.db_port = db_port
     view.table_name = db_table
 
     view.conectar()
@@ -254,6 +267,7 @@ def all_controllers(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     controller = controller_generator()
 
@@ -261,6 +275,7 @@ def all_controllers(args):
     controller.db_name = db_name
     controller.db_user = db_user
     controller.db_pw = db_pw
+    controller.db_port = db_port
 
     controller.table_name = name
 
@@ -275,6 +290,7 @@ def one_controller(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     controller = controller_generator()
 
@@ -282,6 +298,7 @@ def one_controller(args):
     controller.db_name = db_name
     controller.db_user = db_user
     controller.db_pw = db_pw
+    controller.db_port = db_port
     controller.table_name = db_table
 
     controller.conectar()
