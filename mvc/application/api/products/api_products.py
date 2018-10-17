@@ -1,5 +1,5 @@
 import web
-import config
+import app.application.api.products.config as config
 import json
 
 

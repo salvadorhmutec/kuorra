@@ -1,4 +1,4 @@
-import config
+import app.application.controllers.products.config as config
 
 class Edit:
 
